@@ -1,15 +1,15 @@
 import React from 'react'
 import Person from './Person'
-import teamData  from './team.json'
 
-const Team = () => {
+const Team = (props) => {
   return (
     <section id='team'>
       <div className='container'>
         <div className='row'>
-          {teamData.map((person) => {
+          {props.edges.map(({node}) => {
+              console.log(node)
             return (
-              <Person {...person} />
+              <Person {...node} />
             )
           })}
         </div>
@@ -19,3 +19,5 @@ const Team = () => {
 }
 
 export default Team
+
+

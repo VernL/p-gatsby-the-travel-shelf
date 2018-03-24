@@ -5,7 +5,6 @@ import StoreCard from '../components/StoreCard/StoreCard'
 import './index.scss'
 
 const IndexPage = ({ data }) => {
-  console.log(data)
   return (
     <div className='top'>
         <section id='showcase' className='py-5 text-white'>

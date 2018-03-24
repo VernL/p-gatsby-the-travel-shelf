@@ -12,17 +12,17 @@ module.exports = {
           path: `${__dirname}/src/bookstores`,
       }
     },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //       name: `bookstores`,
-    //       path: `${__dirname}/src/bookstores`,
-    //   }
-    // },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+          name: `team`,
+          path: `${__dirname}/src/components/Team`,
+      }
+    },
     `gatsby-transformer-remark`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-
+    `gatsby-transformer-json`,
       {
           resolve: `gatsby-transformer-remark`,
           options: {

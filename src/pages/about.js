@@ -39,10 +39,37 @@ class About extends Component {
             </div>
           </div>
         </section>
-        <Team />
+        <Team edges={this.props.data.allTeamJson.edges} />
       </div>
     )
   }
 }
 
 export default About
+
+export const query = graphql`
+query TeamQuery 
+{
+  allTeamJson {
+    edges {
+      node {
+        name
+        jobTitle
+        jobSubTitle
+        bio
+        social {
+          github
+          twitter
+          linkedin
+        }
+        avatar {
+          childImageSharp {
+            sizes(maxWidth: 400) {
+                ...GatsbyImageSharpSizes
+            }
+          }
+        }
+      }
+    }
+  }
+}`
