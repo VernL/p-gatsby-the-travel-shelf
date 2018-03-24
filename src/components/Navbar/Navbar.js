@@ -30,8 +30,8 @@ class NavbarComponent extends Component {
       <div>
         <Navbar className="navbar" color="faded" light fixed={'top'} expand="md">
           <Container>
-            <NavbarBrand>
-              <Link>
+            <NavbarBrand tag="div">
+              <Link to='/' >
               <img src={logo} width='50' height='40' alt='travel-shelf logo' />
               <h4 style={{color: 'black'}} className='d-inline align-middle'>Travel Shelf</h4>
             </Link>
@@ -44,12 +44,6 @@ class NavbarComponent extends Component {
               </NavItem>
               <NavItem className="nav-item">
                 <Link to='/about' className='nav-link'>About</Link>
-              </NavItem>
-              <NavItem className="nav-item">
-                <Link to='/stores' exact className='nav-link'>Stores</Link>
-              </NavItem>
-              <NavItem className="nav-item">
-                <Link to='/map' exact className='nav-link'>Map</Link>
               </NavItem>
             </Nav>
           </Collapse>

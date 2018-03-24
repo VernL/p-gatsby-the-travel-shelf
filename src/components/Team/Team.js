@@ -7,9 +7,8 @@ const Team = (props) => {
       <div className='container'>
         <div className='row'>
           {props.edges.map(({node}) => {
-              console.log(node)
             return (
-              <Person {...node} />
+              <Person key={node.name} {...node} />
             )
           })}
         </div>

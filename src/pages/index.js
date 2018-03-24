@@ -31,6 +31,7 @@ const IndexPage = ({ data }) => {
                 <div className='row no-gutters d-flex flex-wrap justify-content-around align-items-baseline'>
                   {data.allMarkdownRemark.edges.map(({ node }) => (
                       <StoreCard
+                        key={node.frontmatter.title}
                         slug={node.fields.slug}
                         title={node.frontmatter.title}
                         excerpt={node.excerpt}

@@ -10,7 +10,7 @@ const SocialIcons = (props) => {
     }
 
     return (
-      <SocialIcon name={key} url={url} />
+      <SocialIcon key={key} name={key} url={url} />
     )
   })
 
