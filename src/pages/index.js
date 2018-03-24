@@ -35,7 +35,7 @@ const IndexPage = ({ data }) => {
                         slug={node.fields.slug}
                         title={node.frontmatter.title}
                         excerpt={node.excerpt}
-                        thumbnail={node.frontmatter.thumbnail.childImageSharp.responsiveSizes.src}
+                        thumbnail={node.frontmatter.thumbnail.childImageSharp.sizes}
                       />
                   ))}
                 </div>
@@ -59,10 +59,8 @@ allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}) {
             date(formatString: "YYYY-MM-DD")
             thumbnail {
               childImageSharp {
-                responsiveSizes(maxWidth: 400) {
-                src
-                srcSet
-                sizes
+                  sizes(maxWidth: 400) {
+                    ...GatsbyImageSharpSizes
                 }
               }
             }
