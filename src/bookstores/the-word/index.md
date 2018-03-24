@@ -18,6 +18,8 @@ lat: "45.507991"
 ---
 > In the beginning was the word…
 
+![](word_1.jpg)
+
 I moved to Montréal to follow my girlfriend. She had been accepted to a two year masters at McGill in Urban Planning. Sitting in a cafe in Union Square, one of the dozens of urchin-like cutouts named ‘squares’ in Cambridge, she asked if I would like to come and stay there with her. 
 
 *Why not?* I responded. Cambridge has its appeals; Harvard, MIT, the T, Dunkin Donuts, the museum - but it has a dearth of a couple of things. One of them is hills, and the other is foreignness. Boston was the only major city in New England, near where I grew up. Montréal - on the other hand - was exotic, foriegn, somewhere between the Arctic and the illustrious northern ski slopes of Vermont.
