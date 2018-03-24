@@ -7,10 +7,10 @@ import Footer from '../components/Footer/Footer'
 
 import 'font-awesome/css/font-awesome.css'
 
-const TemplateWrapper = ({ children }) => (
+const DefaultLayout = ({ children, data }) => (
   <div>
     <Helmet
-      title="The Travel Shelf"
+      title={data.site.siteMetadata.title}
       meta={[
         { name: 'description', content: 'A magazine and index of beautiful global independent bookstores' },
       ]}
@@ -21,8 +21,14 @@ const TemplateWrapper = ({ children }) => (
   </div>
 )
 
-TemplateWrapper.propTypes = {
-  children: PropTypes.func,
-}
+export default DefaultLayout
 
-export default TemplateWrapper
+export const query = graphql`
+  query LayoutQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`
