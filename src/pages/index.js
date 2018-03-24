@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import StoreCard from '../components/StoreCard/StoreCard'
 
 import './index.scss'
 
@@ -23,22 +24,19 @@ const IndexPage = ({ data }) => {
         </section>
 
         <section id='portfolio'>
-            <div className='container-fluid'>
+            <div className='container'>
                 <h2 className='text-center'>Welcome To The Travel Shelf</h2>
                 <hr align='center' width='30%'/>
                 <p className='text-center header'>Browse Our Portfolio And Visit Your Local Independent Bookstores
                     Today!</p>
-                <div className='row no-gutters d-flex flex-wrap justify-content-center align-items-baseline'>
+                <div className='row no-gutters d-flex flex-wrap justify-content-around align-items-baseline'>
                   {data.allMarkdownRemark.edges.map(({ node }) => (
-                  <Link
-                      to={node.fields.slug}
-                      style={{ textDecoration: `none`, color: `inherit` }}
-                  >
-                  <div className='col-12'>
-                  <h3>{node.frontmatter.title}{" "}</h3>
-                  <p>{node.excerpt}</p>
-                  </div>
-                  </Link>
+                      <StoreCard
+                        slug={node.fields.slug}
+                        title={node.frontmatter.title}
+                        excerpt={node.excerpt}
+                        thumbnail={node.frontmatter.thumbnail.childImageSharp.responsiveSizes.src}
+                      />
                   ))}
                 </div>
             </div>
@@ -59,6 +57,15 @@ allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}) {
           frontmatter {
             title
             date(formatString: "YYYY-MM-DD")
+            thumbnail {
+              childImageSharp {
+                responsiveSizes(maxWidth: 400) {
+                src
+                srcSet
+                sizes
+                }
+              }
+            }
           }
            fields {
             slug

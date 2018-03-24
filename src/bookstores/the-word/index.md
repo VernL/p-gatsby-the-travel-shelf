@@ -1,7 +1,7 @@
 ---
 title: "The Word"
 date: "2018-01-22"
-thumbnail: "assets/img/word/word_1.jpg"
+thumbnail: "word_1.jpg"
 url: "http://wordbookstore.ca/"
 telephone: "514 845 5640"
 events: "true"
