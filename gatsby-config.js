@@ -8,10 +8,17 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-          name: `src`,
-          path: `${__dirname}/src/`,
+          name: `bookstores`,
+          path: `${__dirname}/src/bookstores`,
       }
     },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //       name: `bookstores`,
+    //       path: `${__dirname}/src/bookstores`,
+    //   }
+    // },
     `gatsby-transformer-remark`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
@@ -26,7 +33,7 @@ module.exports = {
                           // It's important to specify the maxWidth (in pixels) of
                           // the content container as this plugin uses this as the
                           // base for generating different widths of each image.
-                          maxWidth: 590,
+                          maxWidth: 1140,
                       },
                   },
               ],
