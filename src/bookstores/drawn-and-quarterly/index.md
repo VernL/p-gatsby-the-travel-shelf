@@ -20,7 +20,10 @@ long: "-73.6047315"
 lat: "45.524778"
 ---
 
+![](dq_1.jpg)
+
 Montréal and the French language are inextricably linked. You cannot have Quebecois without the city, and you cannot imagine the city without the pervasive French language. This was not always the case. The city was once the center of English Canadian influence, and the Quebecois overtook Quebecers as the primary population in the city only after centuries of being delegated as secondary citizens and backcountry yokels. Today, both French and English are spoken in the city, bilingually by most of the population. The richer neighborhoods are still largely Anglophone (although almost always described as anglophone, and not English speaking).
+
 
 However, because of the size of the French speaking population, there is a surfeit of English-language-focused independent bookstores. The Word, Westcott Books, Ascott (TK) a few in Rosemont. And, hidden in the hip, young, and quickly gentrifying neighborhood of Mile End, past the Jewish bookstores serving the large Hasidic community and a block up from the famous Montreal Bagel shops on [St. Viateur](http://www.stviateurbagel.com/), you’ll find [Drawn and Quarterly](http://mtl.drawnandquarterly.com/).
 
