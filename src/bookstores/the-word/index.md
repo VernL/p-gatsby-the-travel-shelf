@@ -16,9 +16,10 @@ streetAddress: "469 Milton Street"
 long: "-73.575146"
 lat: "45.507991"
 ---
-> In the beginning was the word…
 
 ![](word_1.jpg)
+
+> In the beginning was the word…
 
 I moved to Montréal to follow my girlfriend. She had been accepted to a two year masters at McGill in Urban Planning. Sitting in a cafe in Union Square, one of the dozens of urchin-like cutouts named ‘squares’ in Cambridge, she asked if I would like to come and stay there with her. 
 
