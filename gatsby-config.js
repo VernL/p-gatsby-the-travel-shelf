@@ -1,6 +1,16 @@
 module.exports = {
   siteMetadata: {
-    title: "The Travel Shelf"
+    title: "The Travel Shelf",
+    description:
+      "A magazine and index of beautiful global independent bookstores",
+    url: "http://www.thetravelshelf.com/",
+    twitter: "https://twitter.com/thetravelshelf",
+    github: "https://github.com/RichardLitt/the-travel-shelf",
+    instagram: "https://www.instagram.com/thetravelshelf/",
+    author: {
+      name: "Richard Littauer",
+      email: "richard@burntfen.com"
+    }
   },
   plugins: [
     "gatsby-plugin-react-helmet",

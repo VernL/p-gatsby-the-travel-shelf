@@ -14,8 +14,47 @@ const DefaultLayout = ({ children, data }) => (
       meta={[
         {
           name: "description",
-          content:
-            "A magazine and index of beautiful global independent bookstores"
+          content: data.site.siteMetadata.description
+        },
+        {
+          name: "author",
+          content: data.site.siteMetadata.author.name
+        },
+        {
+          name: "copyright",
+          content: `&copy; ${data.site.siteMetadata.author.name} 2018`
+        },
+        {
+          property: "og:url",
+          content: data.site.siteMetadata.url
+        },
+        {
+          property: "og:type",
+          content: "website"
+        },
+        {
+          property: "og:title",
+          content: data.site.siteMetadata.title
+        },
+        {
+          property: "og:description",
+          content: data.site.siteMetadata.description
+        },
+        {
+          property: "og:site_name",
+          content: "thetravelshelf.com"
+        },
+        {
+          name: "twitter:card",
+          content: "summary"
+        },
+        {
+          name: "twitter:site",
+          content: data.site.siteMetadata.twitter
+        },
+        {
+          name: "twitter:title",
+          content: data.site.siteMetadata.title
         }
       ]}
     />
@@ -32,6 +71,12 @@ export const query = graphql`
     site {
       siteMetadata {
         title
+        url
+        twitter
+        description
+        author {
+          name
+        }
       }
     }
   }
