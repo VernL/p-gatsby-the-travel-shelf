@@ -26,24 +26,17 @@ const bookstorePost = ({ data }) => {
       </section>
       <section id="blog-bookstore">
         <div className="container">
-          <div className="row justify-content-center" id="primary">
-            <main id="content" className="col-md-8">
-              <article
-                className="post"
-                style={{ padding: "30px 20px", marginBottom: "40px" }}
-              >
-                <div dangerouslySetInnerHTML={{ __html: post.html }} />
-              </article>
-            </main>
+          <main id="content" className="col-xs-10">
+            <article className="post">
+              <div dangerouslySetInnerHTML={{ __html: post.html }} />
+            </article>
+          </main>
 
-            <aside className="col-md-4">
-              <div className="widget">
-                <h4>Join Our Mailing List</h4>
-                <p>Keep up-to-date with the latest news!</p>
-                <Form />
-              </div>
+          <hr align="center" width="70%" />
 
-              <div className="widget">
+          <div className="container">
+            <aside className="row justify-content-center">
+              <div className="widget col-md-4 ">
                 <h4 className="connect">Info</h4>
                 <p className="address">
                   <strong>{post.frontmatter.title}</strong>
@@ -70,24 +63,6 @@ const bookstorePost = ({ data }) => {
                     <a href={post.frontmatter.instagram}>
                       <i className="fa fa-instagram" />
                     </a>
-                  ) : null}
-                </p>
-              </div>
-
-              <div className="widget">
-                <h4 className="connect">Amenities</h4>
-                <p className="social">
-                  {post.frontmatter.coffee ? (
-                    <i className="fa fa-coffee" aria-hidden="true" />
-                  ) : null}
-                  {post.frontmatter.wifi ? (
-                    <i className="fa fa-wifi" aria-hidden="true" />
-                  ) : null}
-                  {post.frontmatter.plug ? (
-                    <i className="fa fa-plug" aria-hidden="true" />
-                  ) : null}
-                  {post.frontmatter.calendar ? (
-                    <i className="fa fa-calendar" aria-hidden="true" />
                   ) : null}
                 </p>
               </div>
