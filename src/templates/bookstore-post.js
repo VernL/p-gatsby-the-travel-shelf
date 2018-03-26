@@ -108,8 +108,14 @@ export const query = graphql`
       frontmatter {
         title
         url
-        events
         telephone
+        coffee
+        plugs
+        wifi
+        events
+        twitter
+        facebook
+        instagram
         addressCountry
         addressRegion
         addressLocality
