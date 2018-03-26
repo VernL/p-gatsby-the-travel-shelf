@@ -5,7 +5,7 @@
 #info {
 
   .info-map {
-    padding: 100px 0 50px;
+    padding: 0px 0 50px;
     text-align: center;
 
     p {
@@ -18,7 +18,7 @@
     }
 
     .email {
-      color: #111111;
+      color: $yellow;
       -o-transition:color .2s ease-out, background 1s ease-in;
       -ms-transition:color .2s ease-out, background 1s ease-in;
       -moz-transition:color .2s ease-out, background 1s ease-in;
@@ -28,6 +28,17 @@
 
     .email:hover {
       color: #ffc107;
+    }
+
+    button {
+      background: $yellow ;
+      border: 4px solid $yellow;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #fff;
+      border: 4px solid #fff
     }
 
     a {
