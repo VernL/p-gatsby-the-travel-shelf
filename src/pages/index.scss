@@ -127,7 +127,6 @@ h1 {
 
 #portfolio {
   padding-top: $section-padding-top;
-  margin-bottom: 100px;
 
   p.header {
     font-size: 1.3rem;
@@ -166,6 +165,19 @@ h1 {
     text-align: center;
     color: #fff;
     margin-top: -12px;
+  }
+}
+
+#featuredPost {
+  padding-top: $section-padding-top;
+
+  h1 {
+    margin-top: 50px;
+  }
+
+  p {
+    font-size: 16px;
+    margin: 2em;
   }
 }
 
@@ -218,6 +230,13 @@ M E D I A  Q U E R I E S
       font-size: 3.5rem;
       margin-top: 9rem;
       padding-top: 3.5rem;
+    }
+  }
+
+  #featuredPost {
+
+    p {
+      font-size: 22px;
     }
   }
 

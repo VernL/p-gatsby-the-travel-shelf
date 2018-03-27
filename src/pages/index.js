@@ -5,6 +5,8 @@ import StoreCard from "../components/StoreCard/StoreCard";
 import "./index.scss";
 
 const IndexPage = ({ data }) => {
+  const allPosts = data.allMarkdownRemark.edges;
+  const latestPost = data.latestPost.edges[0].node;
   return (
     <div className="top">
       <section id="showcase" className="py-5 text-white">
@@ -37,7 +39,7 @@ const IndexPage = ({ data }) => {
             Today!
           </p>
           <div className="row no-gutters d-flex flex-wrap justify-content-around align-items-baseline">
-            {data.allMarkdownRemark.edges.map(({ node }) => (
+            {allPosts.map(({ node }) => (
               <StoreCard
                 key={node.frontmatter.title}
                 slug={node.fields.slug}
@@ -47,6 +49,21 @@ const IndexPage = ({ data }) => {
               />
             ))}
           </div>
+        </div>
+      </section>
+
+      <section id="featuredPost">
+        <div className="container">
+          <h2 className="text-center">Featured Bookstore</h2>
+          <hr align="center" width="30%" />
+          <h1 className="text-center">{latestPost.frontmatter.title}</h1>
+          <article className="post">
+            <div
+              dangerouslySetInnerHTML={{
+                __html: latestPost.html
+              }}
+            />
+          </article>
         </div>
       </section>
     </div>
@@ -61,6 +78,7 @@ export const query = graphql`
       edges {
         node {
           id
+          html
           frontmatter {
             title
             date(formatString: "YYYY-MM-DD")
@@ -76,6 +94,19 @@ export const query = graphql`
             slug
           }
           excerpt
+        }
+      }
+    }
+    latestPost: allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      limit: 1
+    ) {
+      edges {
+        node {
+          html
+          frontmatter {
+            title
+          }
         }
       }
     }
